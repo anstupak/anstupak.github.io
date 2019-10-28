@@ -1,0 +1,161 @@
+.Story {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('img/story/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Story_marker {
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    padding: 5px;
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.Story_marker::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.Story_marker:hover {
+    -webkit-transform: scale(2.395) rotate(0.02deg);
+            transform: scale(2.395) rotate(0.02deg);
+}
+
+#story-hospital-modal-button {
+    top: 82%;
+    left: 21%;
+}
+
+#story-patient-modal-button {
+    top: 79%;
+    left: 45%;
+}
+
+#story-doctors-modal-button {
+    top: 49%;
+    left: 57%;
+}
+
+#story-floor-modal-button {
+    top: 82%;
+    left: 73%;
+}
+
+.StoryHospitalModal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: auto;
+    height: 80%;
+}
+
+.StoryHospitalModal__newspaper {
+    width: auto;
+    height: 100%;
+}
+
+.Slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+    -webkit-perspective-origin: 50% -50%;
+            perspective-origin: 50% -50%;
+    pointer-events: none;
+}
+
+.Slider__card {
+    pointer-events: all;
+    width: auto;
+    height: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: opacity 0.4s ease-out, -webkit-transform 0.4s ease-out;
+    transition: opacity 0.4s ease-out, -webkit-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out, -webkit-transform 0.4s ease-out;
+}
+
+.Slider__card--1 {
+    z-index: 250;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+}
+
+.Slider__card--2 {
+    z-index: 249;
+    -webkit-transform: translate(-50%, -54%) scale(0.95);
+            transform: translate(-50%, -54%) scale(0.95);
+}
+
+.Slider__card--3 {
+    z-index: 248;
+    -webkit-transform: translate(-50%, -58%) scale(0.89);
+            transform: translate(-50%, -58%) scale(0.89);
+}
+
+.Slider__card--4 {
+    z-index: 247;
+    -webkit-transform: translate(-50%, -63%) scale(0.81);
+            transform: translate(-50%, -63%) scale(0.81);
+    opacity: 0;
+}
+
+.Slider__card--closed {
+    z-index: 251;
+    -webkit-transform: translate(50%, -50%) rotate(10deg);
+            transform: translate(50%, -50%) rotate(10deg);
+    -webkit-transition: opacity 0.2s ease-out 0.2s, -webkit-transform 0.4s ease-out;
+    transition: opacity 0.2s ease-out 0.2s, -webkit-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out, opacity 0.2s ease-out 0.2s;
+    transition: transform 0.4s ease-out, opacity 0.2s ease-out 0.2s, -webkit-transform 0.4s ease-out;
+    opacity: 0;
+}
+
+.Slider__next {
+    pointer-events: all;
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 250;
+    outline: none;
+    text-transform: uppercase;
+}
+
+.StoryDoctorsModal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: auto;
+    height: 80%;
+}
+
+.StoryDoctorsModal__photo {
+    width: auto;
+    height: 100%;
+}
